@@ -126,7 +126,8 @@ public class Commodity {
 	}
 
 	public static void sortByName(TreeSet<Commodity> set) {
-		TreeSet set1 = new TreeSet<Commodity>(new ComparatorCommodityByName());
+		TreeSet set1 = new TreeSet<Commodity>(new ComparatorCommodityByName()); //???? як посортувати сет, 
+		//не створюючи новий сет, щоб не викликати компаратор в конструкторі
 		set1.addAll(set);
 	}
 
